@@ -123,6 +123,21 @@
                     </execution>
                 </executions>
             </plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>2.0.3</version>
+				<configuration>
+					<appName>mlata-finance-control</appName>
+					<includeTarget>false</includeTarget>
+					<includes>
+						<include>target/backend-1.0.0.jar</include>
+					</includes>
+					<processTypes>
+						<web>java -Dserver.port=$PORT -jar target/backend-1.0.0.jar</web>
+					</processTypes>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 

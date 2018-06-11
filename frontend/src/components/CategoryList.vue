@@ -17,6 +17,7 @@
               <v-list-tile-content>
                 <v-list-tile-title>{{ subCategory.title }}</v-list-tile-title>
               </v-list-tile-content>
+              <v-list-tile-action><v-chip color="primary" text-color="white">{{ subCategory.amount + ' PLN' }}</v-chip></v-list-tile-action>
             </v-list-tile>
           </v-list-group>
         </v-list>
@@ -35,7 +36,7 @@ export default {
           title: 'Jedzenie',
           amount: 1500,
           subCategories: [
-            { title: 'Słodycze', amount: 200 },
+            { title: 'Słodycze', amount: 200.49 },
             { title: 'Codzienne', amount: 800 },
             { title: 'Na miescie', amount: 500 }
           ]
